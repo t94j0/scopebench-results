@@ -6,36 +6,22 @@ body:
   - type: markdown
     attributes:
       value: |
-        Run Harbor locally and send the complete job ZIP plus submission metadata.
+        Run Harbor locally and send the complete native job ZIP.
+        We extract the harness, recorded version, models, and configuration from those files.
         See https://scopebench.maxh.io/submit. Harbor Hub is not required.
         Attach the ZIP here or provide a download link maintainers can access.
-  - type: input
-    id: harness
-    attributes:
-      label: Harness and exact version
-      placeholder: Repository URL and commit, or released harness version
-    validations:
-      required: true
-  - type: input
-    id: model
-    attributes:
-      label: Model and configuration
-      placeholder: Provider/model ID, reasoning effort, tool/turn budgets
-    validations:
-      required: true
-  - type: input
-    id: release
-    attributes:
-      label: Benchmark release
-    validations:
-      required: true
   - type: textarea
     id: evidence
     attributes:
-      label: Complete Harbor job files and metadata
-      description: Attach a ZIP or link the complete saved job folder(s), including all attempts, trajectories, verifier outputs, and judge logs. Include submission metadata and the exact run command.
+      label: Complete Harbor job files
+      description: Attach a ZIP or link the complete saved job folder(s), including all attempts, configurations, trajectories, verifier outputs, and judge logs. Do not re-enter the model, harness version, or configuration.
     validations:
       required: true
+  - type: textarea
+    id: attribution
+    attributes:
+      label: Attribution and additional context (optional)
+      description: Your name or organization, a harness repository URL, or context not already recorded in the run. Otherwise we attribute the submission to your GitHub handle.
   - type: checkboxes
     id: public
     attributes:
