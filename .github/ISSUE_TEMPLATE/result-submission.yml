@@ -1,0 +1,45 @@
+name: Submit benchmark results
+description: Send native Harbor job files for publication on ScopeBench.
+title: "Result: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Run Harbor locally and send the complete job ZIP plus submission metadata.
+        See https://scopebench.maxh.io/submit. Harbor Hub is not required.
+        Attach the ZIP here or provide a download link maintainers can access.
+  - type: input
+    id: harness
+    attributes:
+      label: Harness and exact version
+      placeholder: Repository URL and commit, or released harness version
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model and configuration
+      placeholder: Provider/model ID, reasoning effort, tool/turn budgets
+    validations:
+      required: true
+  - type: input
+    id: release
+    attributes:
+      label: Benchmark release
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Complete Harbor job files and metadata
+      description: Attach a ZIP or link the complete saved job folder(s), including all attempts, trajectories, verifier outputs, and judge logs. Include submission metadata and the exact run command.
+    validations:
+      required: true
+  - type: checkboxes
+    id: public
+    attributes:
+      label: Publication
+      options:
+        - label: I authorize public publication of these run files and have removed credentials.
+          required: true

@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: ScopeBench submission instructions
+    url: https://scopebench.maxh.io/submit
+    about: How to run Harbor locally and prepare complete result files.
