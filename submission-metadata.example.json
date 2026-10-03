@@ -1,13 +1,7 @@
 {
   "submitter": "Your name or organization",
-  "harbor_version": "Version printed by harbor --version",
-  "model": "anthropic/claude-sonnet-5",
-  "command": "harbor run -c configs/paired.json -k 5",
   "verification": "community",
   "agent": {
-    "id": "claude-code",
-    "name": "Claude Code",
-    "version": "Exact harness version or repository commit",
     "url": "https://github.com/anthropics/claude-code",
     "organization": "Anthropic"
   }
